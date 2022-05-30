@@ -11,9 +11,9 @@ int main(int argc, char * argv[])
     }
     rclcpp::init(argc, argv);
 
-    auto node = std::make_shared<rclcpp::Node>("on_cartesian");
+    auto node = std::make_shared<rclcpp::Node>("send_topic");
     auto pub = node->create_publisher<std_msgs::msg::Float64MultiArray>(
-        "/cmd",
+        "/hqp_controller/commands",
         10);
     auto msg = std_msgs::msg::Float64MultiArray();
     for (size_t i = 0; i < 6; i++) msg.data.push_back(atof(argv[i + 1]));
