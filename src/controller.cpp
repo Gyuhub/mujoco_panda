@@ -295,8 +295,8 @@ void Controller::calculate_command()
 	joint_acc_des.setZero();
 	kdj_ = 20.0;
 	kpj_ = 100.0;
-	joint_acc_des = kpj_ * ((model_.max_joint_position_ + model_.min_joint_position_) / 2.0 - q_) - kdj_ * qdot_;
-	// joint_acc_des = -_kdj * _qdot;
+	// joint_acc_des = kpj_ * ((model_.max_joint_position_ + model_.min_joint_position_) / 2.0 - q_) - kdj_ * qdot_;
+	joint_acc_des = -kdj_ * qdot_;
 	joint_acc_des(7) = 0.0;
 	joint_acc_des(8) = 0.0;
 	// joint_acc_des(0) = 400.0 * (_q_home(0)- _q(0)) - _kdj * _qdot(0);
