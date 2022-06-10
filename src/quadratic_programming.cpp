@@ -1,4 +1,4 @@
-#include "mujoco_panda/quadratic_programming.h"
+#include "mujoco_panda/quadratic_programming.hpp"
 
 QuadraticProgram::QuadraticProgram()
 {

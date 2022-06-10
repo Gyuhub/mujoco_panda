@@ -1,4 +1,4 @@
-#include "mujoco_panda/model.h"
+#include "mujoco_panda/model.hpp"
 
 Model::Model()
 : dofs_(0)

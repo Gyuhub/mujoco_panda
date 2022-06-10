@@ -1,4 +1,4 @@
-#include "mujoco_panda/trajectory.h"
+#include "mujoco_panda/trajectory.hpp"
 
 Trajectory::Trajectory()
 {
