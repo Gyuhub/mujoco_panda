@@ -3,10 +3,10 @@
 #define __CONTROLLER_HPP__
 
 // 3rd-party API & custom header dependencies
-#include "control_math.h"
-#include "model.h"
-#include "trajectory.h"
-#include "quadratic_programming.h"
+#include "control_math.hpp"
+#include "model.hpp"
+#include "trajectory.hpp"
+#include "quadratic_programming.hpp"
 
 // ROS2
 #include "rclcpp/rclcpp.hpp"
@@ -89,7 +89,7 @@ private:
 
 // file I/O
 private:
-    std::fstream fs_;
+    std::ofstream fs_;
     std::string filename_;
 };
 

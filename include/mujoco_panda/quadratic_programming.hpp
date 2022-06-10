@@ -5,7 +5,7 @@
 #include <iostream>
 #include <Eigen/Dense>
 #include "qpOASES.hpp"
-#include "control_math.h"
+#include "control_math.hpp"
 
 #define useDynamicMemoryAllocation
 

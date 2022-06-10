@@ -8,7 +8,7 @@
 #include <rbdl/addons/urdfreader/urdfreader.h>
 #include <Eigen/Dense>
 #include <Eigen/Geometry>
-#include "control_math.h"
+#include "control_math.hpp"
 
 class Model
 {
