@@ -4,7 +4,7 @@ MuJoCo robot simulator using Franka Emika panda model
 ## Requirements
 - ROS2 (foxy)
 - Eigen (more than 3)
-- RBDL & RBDL URDFReader (ORB version)
+- RBDL & RBDL URDFReader
 - Mujoco (MUlti-JOint dynamics with COntact)
 - GLEW
 - OpenGL
@@ -24,24 +24,26 @@ sudo apt install libeigen3-dev
 ```
 - RBDL
 ```
-git clone https://github.com/rbdl/rbdl-orb
+git clone --recursive https://github.com/rbdl/rbdl
 cd rbdl
 mkdir build
 cd build
 cmake -D CMAKE_BUILD_TYPE=Release -DRBDL_BUILD_ADDON_URDFREADER=ON -DRBDL_USR_ROS_URDF_LIBRARY=OFF ..
 make all
-make install
+sudo make install
 sudo ldconfig
 ```
 
 - Mujoco
-Mujoco installation link : https://mujoco.org/download
+
+[Mujoco installation link](https://mujoco.org/download).
+
 If you enter the link successfully, all you need to do is just push the button which has a name of "Linux"
 ```
 cd
-mkdir Simulations
+mkdir Simulators
 ```
-After download the file, you can Extract the file to the location of "~/Simulations"
+After download the file, you can Extract the file to the location of "~/Simulators"
 
 - GLEW
 ```
@@ -58,7 +60,8 @@ After that you can check either the OpenGL is successfully installed or not by e
 ls /usr/include/GL
 ```
 
-Contents
+## Directory structure
+```
 ├─include
 │   | control_math.h
 │   | controller.hpp
@@ -86,3 +89,4 @@ Contents
 | CMakeLists.txt
 | README.md
 └─package.xml
+```
